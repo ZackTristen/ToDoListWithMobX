@@ -1,0 +1,63 @@
+
+.done {
+    transition-duration: 900ms;
+    text-decoration: line-through;
+    color: rgba(53, 53, 53, 0.534);
+    font-family: 'Roboto', sans-serif;
+    font-weight: light;
+}
+
+.important {
+    transition-duration: 300ms;
+    color: rgb(49, 121, 168);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.date {
+    
+    font-size: 10px;
+    color: rgb(87, 87, 87);
+}
+.item_task {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.item_container {
+    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.btn_flag_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 5px;
+}
+
+.important_btn, .delete_btn, .done_btn {
+    margin: 5px;
+    border-radius: 10px;
+}
+.important_btn {
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    background-color: rgb(255, 255, 255);
+    
+}
+.delete_btn {
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    background-color: rgb(255, 255, 255);
+}
+.done_btn {
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    background-color: rgb(255, 255, 255);
+}
+.important_btn:active, .delete_btn:active, .done_btn:active {
+    transition-duration: 200ms;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.288);
+}

@@ -5,27 +5,27 @@ class ToDoList {
 
     todo = {
         todos: [
-            {
-                id: 1,
-                title: 'make tea',
-                date: '23-07-2019',
-                important: true,
-                done: false
-            },
-            {
-                id: 2,
-                title: 'make tea',
-                date: '23-07-2019',
-                important: false,
-                done: true
-            },
-            {
-                id: 3,
-                title: 'make tea',
-                date: '23-07-2019',
-                important: false,
-                done: false
-            }
+            // {
+            //     id: 1,
+            //     title: 'make tea',
+            //     date: '23-07-2019',
+            //     important: true,
+            //     done: false
+            // },
+            // {
+            //     id: 2,
+            //     title: 'make tea',
+            //     date: '23-07-2019',
+            //     important: false,
+            //     done: true
+            // },
+            // {
+            //     id: 3,
+            //     title: 'make tea',
+            //     date: '23-07-2019',
+            //     important: false,
+            //     done: false
+            // }
         ],
         label: '',
         filtering: '',
@@ -125,7 +125,8 @@ class ToDoList {
         this.todo.label = text;
 
     }
-    addTask = () => {
+    addTask = (e) => {
+        e.preventDefault()
         const newTitle = this.todo.label;
 
         const forDate = {
