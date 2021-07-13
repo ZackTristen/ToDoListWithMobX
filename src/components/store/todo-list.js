@@ -28,11 +28,31 @@ class ToDoList {
             }
         ],
         label: '',
-        filtering: ''
+        filtering: '',
+        stateButton: [
+            { name: 'all', status: true },
+            { name: 'done', status: false },
+            { name: 'important', status: false }
+        ]
     }
 
+    onToggleStatus = (title) => {
 
+        this.todo.stateButton = this.todo.stateButton.map((item) => {
+            if (item.name === title) {
+                return {
+                    name: item.name,
+                    status: true
+                }
+            } else {
+                return {
+                    name: item.name,
+                    status: false
+                }
+            }
+        })
 
+    }
 
     constructor() {
         makeAutoObservable(this)
@@ -65,18 +85,39 @@ class ToDoList {
         })
     }
 
+
+
     sortData = () => {
-
-        if (this.todo.filtering.length === 0) {
-            return this.todo.todos;
+        if (this.todo.stateButton[0].status === true) {
+            if (this.todo.filtering.length === 0) {
+                return this.todo.todos;
+            }
+            return this.todo.todos.filter((item) => {
+                return item.title.toLowerCase().indexOf(this.todo.filtering.toLowerCase()) > -1;
+            });
         }
-
-        return this.todo.todos.filter((item) => {
-            return item.title.toLowerCase().indexOf(this.todo.filtering.toLowerCase()) > -1;
-        });
+        if (this.todo.stateButton[1].status === true) {
+            if (this.todo.filtering.length === 0) {
+                return this.todo.todos.filter(item => item.done === true);
+            }
+            const matches = this.todo.todos.filter(item => item.important === false && item.done === true)
+            return matches.filter((item) => {
+                return item.title.toLowerCase().indexOf(this.todo.filtering.toLowerCase()) > -1;
+            });
+        }
+        if (this.todo.stateButton[2].status === true) {
+            if (this.todo.filtering.length === 0) {
+                return this.todo.todos.filter(item => item.important === true && item.done === false);
+            }
+            const matches = this.todo.todos.filter(item => item.important === true && item.done === false)
+            return matches.filter((item) => {
+                return item.title.toLowerCase().indexOf(this.todo.filtering.toLowerCase()) > -1;
+            });
+        }
     }
 
     changeFiltering = (text) => {
+
         this.todo.filtering = text;
     }
 
