@@ -1,0 +1,9 @@
+.important {
+
+    color: blue;
+}
+
+.done {
+
+    text-decoration: line-through;
+}
