@@ -127,8 +127,8 @@ class ToDoList {
     }
     addTask = (e) => {
         e.preventDefault()
-        const newTitle = this.todo.label;
-        if (newTitle !== '') {
+        const newTitle = this.todo.label.trim();
+        if (newTitle.length > 0 ) {
             const forDate = {
             day: this.now.getDate() > 10 ? `${this.now.getDate()}` : `0${this.now.getDate()}`,
             month: (this.now.getMonth() + 1) > 10 ? `${(this.now.getMonth() + 1)}` : `0${this.now.getMonth() + 1}`,
@@ -145,7 +145,7 @@ class ToDoList {
 
         this.todo.label = ''
         this.todo.todos.push(newTask) }
-        
+
     }
 
     removeTask = (id) => {
