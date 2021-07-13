@@ -17,7 +17,7 @@ const AddToDoPanel = observer(props => {
                 type="submit" 
                 onClick={(e) => addTask(e)}
                 className='add_btn'>
-                ✓
+                + Добавить задачу
                 </button>
             </form>
             
