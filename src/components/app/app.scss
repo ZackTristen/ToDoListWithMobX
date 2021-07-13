@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@mixin main-font {
+    font-family: 'Roboto', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
+    @include main-font();
+    color: #242424;
 }
 li {
     list-style-type: none;
@@ -7,15 +16,17 @@ li {
     padding: 0;
   }
 
-button {
+button, input {
     border: none; outline: none;
+    @include main-font();
 }
 .app {
+    margin: auto;
     margin-top: 50px;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 420px;
     align-items: center;
     justify-content: center;
 }

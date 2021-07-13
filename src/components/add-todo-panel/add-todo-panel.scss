@@ -4,11 +4,12 @@
     justify-content: center;
     margin-top: 20px;   
     overflow-wrap: break-word;
+    width: 100%;
     
 }
 
 .task_add_form {
-    
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,9 +17,7 @@
     margin: auto;
 }
 .textarea_task {
-    
-    width: 300px;
-    border-radius: 10px;
+    border-bottom: 1px solid #ccc;
 }
 
 .textarea_task:focus {
@@ -29,10 +28,16 @@
     font-weight: bold;
     margin-top: 10px;
     background-color: rgba(255, 255, 255, 0);
-    
-}
-.add_btn:hover {
-    transition-duration: 300ms;
-    // text-shadow: 0px 0px  5px black;
-    transform: scale(1.1);
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    padding: 15px 30px;
+    transition: 150ms;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(233, 233, 233);
+    }
+
+    &:active {
+        background-color: #aaa;
+    }
+
 }

@@ -24,12 +24,13 @@
     font-family: 'Roboto', sans-serif;
 }
 .item_container {
-    
-    margin: auto;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    padding: 15px;
 }
 
 .btn_flag_container {
@@ -43,19 +44,19 @@
 .important_btn, .delete_btn, .done_btn {
     margin: 5px;
     border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
 }
 .important_btn {
-    border: 1px solid rgba(0, 0, 0, 0.363);
     background-color: rgb(255, 255, 255);
+    background-color: rgb(65, 151, 190);
     
 }
 .delete_btn {
-    border: 1px solid rgba(0, 0, 0, 0.363);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(180, 76, 76);
 }
 .done_btn {
-    border: 1px solid rgba(0, 0, 0, 0.363);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(73, 161, 85);
 }
 .important_btn:active, .delete_btn:active, .done_btn:active {
     transition-duration: 200ms;
