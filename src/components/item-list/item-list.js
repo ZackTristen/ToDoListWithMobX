@@ -10,9 +10,11 @@ const ItemList = observer(() => {
         <div className='item_list'>
         <ul>
             {
-                sortedData.map(item => {
+                sortedData.length 
+                ? sortedData.map(item => {
                     return <Item data={item} key={item.id} />
                 })
+                : <span>Список задач пуст</span>
             }
         </ul>
         </div>

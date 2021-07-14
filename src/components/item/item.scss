@@ -15,13 +15,13 @@
 }
 
 .date {
-    
     font-size: 10px;
     color: rgb(87, 87, 87);
 }
-.item_task {
+li .item_task {
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
+    color: #242424;
 }
 .item_container {
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
@@ -31,6 +31,7 @@
     align-content: center;
     justify-content: center;
     padding: 15px;
+    margin-bottom: 5px;
 }
 
 .btn_flag_container {
@@ -46,6 +47,7 @@
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
+    padding: 2px 8px;
 }
 .important_btn {
     background-color: rgb(255, 255, 255);

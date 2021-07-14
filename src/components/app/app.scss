@@ -23,11 +23,16 @@ button, input {
 .app {
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     width: 420px;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 450px){
+    .app {
+        width: 290px;
+    }
 }
 
