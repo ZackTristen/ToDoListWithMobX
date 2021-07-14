@@ -7,12 +7,6 @@
     font-weight: light;
 }
 
-.important {
-    transition-duration: 300ms;
-    color: rgb(49, 121, 168);
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-}
 
 .date {
     font-size: 10px;
@@ -21,8 +15,16 @@
 .item_task {
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
-    color: #242424;
+    
 }
+.important {
+    transition-duration: 300ms;
+    color: rgb(49, 121, 168);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
 .item_container {
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
     width: 100%;
@@ -50,8 +52,9 @@
     padding: 2px 8px;
 }
 .important_btn {
-    background-color: rgb(255, 255, 255);
+    margin-left: 0;
     background-color: rgb(65, 151, 190);
+
     
 }
 .delete_btn {
