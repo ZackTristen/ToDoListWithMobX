@@ -14,7 +14,7 @@ const ItemList = observer(() => {
                 ? sortedData.map(item => {
                     return <Item data={item} key={item.id} />
                 })
-                : <span>Список задач пуст</span>
+                : <span className='empty_title'>Список задач пуст</span>
             }
         </ul>
         </div>
